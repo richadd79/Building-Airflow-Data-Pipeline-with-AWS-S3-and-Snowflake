@@ -1,0 +1,4 @@
+apache-airflow-providers-snowflake
+snowflake-connector-python
+apache-airflow-providers-common-sql
+snowflake-sqlalchemy
