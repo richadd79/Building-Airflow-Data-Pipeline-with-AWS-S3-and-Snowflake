@@ -9,8 +9,18 @@ platform is used to author and manage this pipleine while installed on Docker.
 The datasets used for this project is here [Tickets_Data](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjBTU1lBTWl0VExvVHg1aUxzNUFZYVRrM2xHUXxBQ3Jtc0tsaExOMGVqYVlRR1FhTjdiQTVuU3o4NWI0RWpUQXBZNlRWYUJpTmh1SElqeGlhYmtPaUJ5UHNBX1dDYXFhSVRkVFRTRUdqcFNEM0xHQlp0anFFWW00bjJ3REtjSGZpRmdqeHhtNTNYMDZqU2p4RjVkSQ&q=https%3A%2F%2Fdocs.aws.amazon.com%2Fredshift%2Flatest%2Fgsg%2Fsamples%2Ftickitdb.zip&v=BopMJPEH6AE) courtesy of Darshil Parmer, a [Youtuber](https://www.youtube.com/@DarshilParmar) and freelance Data Engineer.
 
 
-
 # Tools
+`Python` as the main pramming language used to write the etl pipeline.
+
+`SQL` to construct sql statements for database, tables and related setup.
+
+`S3` as the main data source storage for the datasets
+
+`Snowflake` as the final destination data warehouse
+
+`Apache Airflow` for the orchestration of the data pipeline
+
+`Docker` as the os platform to run the airflow.
 
 
 
