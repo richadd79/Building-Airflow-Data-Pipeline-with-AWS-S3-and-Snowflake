@@ -26,22 +26,22 @@ The datasets used for this project is here [Tickets_Data](https://www.youtube.co
 
 Before the ETL, firstly the we need to setup the following up in Snowflake
 
-    `DATABASE` : TICKETS_DB
+    DATABASE : TICKETS_DB
 
-    `WAREHOUSE` : TKT_DW
+    WAREHOUSE : TKT_DW
 
-    `SCHEMA` : TKT_SCHEMA
+    SCHEMA : TKT_SCHEMA
 
 
 To load S3 data into tables into Snowflake, an external stage has to be set based on a storage integration. This stage refernces the external location 
 (S3 Bucket) of the data files to be loaded. Therefore, we go ahead and the setup the following
 
 
-    `STORAGE INTEGRATIO` : s3_storage_integration
+    STORAGE INTEGRATION : s3_storage_integration
 
-    `FILE FORMAT` : csv_pipe_format 
+    FILE FORMAT : csv_pipe_format 
 
-    `STAGE` : s3_stage 
+    STAGE : s3_stage 
     
 All these are sql statements can be found inside worksheet foler, in the `ticketsDB_worksheet.sql`
 
