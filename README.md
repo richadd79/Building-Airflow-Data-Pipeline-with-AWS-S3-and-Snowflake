@@ -1,7 +1,7 @@
 # Building Airflow Data Pipeline with AWS S3 and Snowflake
 
 # Introduction
-This project sought to build a scehduling data ppipeline to load from S3 Bucket to modern data warehouse platform Snowflake.
+This project sought to build a scheduling data ppipeline to load from S3 Bucket to modern data warehouse platform Snowflake.
 To ochestrate such a data pipeline between S3 and Snowflake, Apache Airflow an open-source workflow management 
 platform is used to author and manage this pipleine while installed on Docker.
 
