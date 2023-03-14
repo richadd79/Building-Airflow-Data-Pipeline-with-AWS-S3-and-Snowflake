@@ -1,7 +1,7 @@
 # Building Airflow Data Pipeline with AWS S3 and Snowflake
 
 # Introduction
-This project sought to build a scheduling data ppipeline to load from S3 Bucket to modern data warehouse platform Snowflake.
+This project sought to build a scheduling data ppipeline to load data from S3 Bucket to modern data warehouse platform Snowflake.
 To ochestrate such a data pipeline between S3 and Snowflake, Apache Airflow an open-source workflow management 
 platform is used to author and manage this pipleine while installed on Docker.
 
@@ -14,19 +14,19 @@ The datasets used for this project is here [Tickets_Data](https://www.youtube.co
 # Tools
 `Python` as the main pramming language used to write the etl pipeline.
 
-`SQL` to construct sql statements for database, tables and related setup.
+`SQL` to construct sql statements for creation of database, tables and related setup.
 
-`S3` as the main data source storage for the datasets
+`S3` as the main data source storage for the datasets.
 
-`Snowflake` as the final destination data warehouse
+`Snowflake` as the final destination data warehouse.
 
-`Apache Airflow` for the orchestration of the data pipeline
+`Apache Airflow` for the orchestration of the data pipeline.
 
-`Docker` as the os platform to run the airflow.
+`Docker` as the platform to run the airflow containers.
 
 # Database & SCHEMA Setup
 
-Before the ETL, firstly the we need to setup the following up in Snowflake
+Before the ETL, firstly we need to setup the following up in Snowflake
 
     DATABASE : TICKETS_DB
 
@@ -45,14 +45,14 @@ To load S3 data into tables into Snowflake, an external stage has to be set base
 
     STAGE : s3_stage 
     
-All these are sql statements can be found inside worksheet foler, in the `ticketsDB_worksheet.sql`
+All these sql statements can be found inside the worksheet foler, in `ticketsDB_worksheet.sql`
 
 
 # ETL Batch Processing
-The ETL Pipeline was designed to schedlle and load multipe csv files in an S3 Bucket directory to table in Snowflake Database.
-Thw whole ETL creates the required tables in Snowflake DB, reads csv data from the tickets_data files in S3 Bucket,
-from there programmatically processes it and loads the them into 5 analytical tables Snowflake using Python and SQL.
-The tables where the data is aloaded in the database are `users`, `venue`, `category`, `date`, `event`,and `listing`.
+The ETL Pipeline was designed to schedlle and load multipe csv files in an S3 Bucket directory to tables in Snowflake Database.
+With the required tables created in Snowflake DB, the ETL pipeline reads csv data from the tickets_data files in S3 Bucket,
+from there programmatically processes it and loads them into 5 analytical tables in Snowflake using Python and SQL.
+The Snowflake tables where the data is loaded to are: `users`, `venue`, `category`, `date`, `event`,and `listing`.
 
 
 # Conclusion
