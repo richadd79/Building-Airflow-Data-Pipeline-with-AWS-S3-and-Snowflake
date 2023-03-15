@@ -49,6 +49,12 @@ All these sql statements can be found inside the worksheet foler, in `ticketsDB_
 
 
 # ETL Batch Processing
+The ETL needs a connection in Airflow to create and load data to Snowflake tables. Hence a snowflake connection is created as
+shown in the screenshot
+
+![image](https://user-images.githubusercontent.com/24456790/225324056-d9af48dd-68f5-4020-9656-c10c40fd8e6a.png)
+
+
 The ETL Pipeline was designed to schedlle and load multipe csv files in an S3 Bucket directory to tables in Snowflake Database.
 With the required tables created in Snowflake DB, the ETL pipeline reads csv data from the tickets_data files in S3 Bucket,
 from there programmatically processes it and loads them into 5 analytical tables in Snowflake using Python and SQL.
